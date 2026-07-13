@@ -1,0 +1,10 @@
+div.Navbar img{
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 0;
+}
+
+div.Navbar p{
+    margin-top: 0;
+    margin-left: 25px;
+}
