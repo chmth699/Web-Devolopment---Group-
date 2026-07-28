@@ -245,33 +245,120 @@ body {
   font-size: 13px;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-  .features-grid {
-    grid-template-columns: repeat(2, minmax(240px, 380px));
+/*Tablet Response*/
+@media screen and (max-width: 1024px) {
+
+  .navbar {
+    padding: 16px 30px;
   }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .page-title {
+    font-size: 34px;
+    margin: 35px 0 28px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    padding: 0 30px 50px;
+  }
+
+  .card {
+    min-height: 120px;
+    padding: 20px;
+  }
+
   .card-wide {
     grid-column: auto;
   }
+
+  .footer {
+    padding: 35px 30px;
+    gap: 30px;
+  }
 }
 
-@media (max-width: 640px) {
+/*Mobile Response*/
+@media screen and (max-width: 767px) {
+
+  /* Navbar */
   .navbar {
-    padding: 16px 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
   }
+
   .nav-links {
-    order: 3;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 15px 0;
   }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    width: 130px;
+  }
+
+  /* Page Title */
+  .page-title {
+    font-size: 28px;
+    margin: 30px 0;
+  }
+
+  /* Features */
   .features-grid {
     grid-template-columns: 1fr;
-    padding: 0 20px 48px;
+    gap: 18px;
+    padding: 0 20px 40px;
   }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .card-text p {
+    max-width: 100%;
+  }
+
+  .icon-circle {
+    margin-bottom: 12px;
+  }
+
+  .card-wide {
+    grid-column: auto;
+  }
+
+  /* Footer */
   .footer {
-    padding: 32px 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding: 30px 20px;
   }
+
+  .footer-col {
+    align-items: center;
+  }
+
   .footer-social {
-    margin-left: 0;
+    margin: 0;
+    justify-content: center;
   }
 }
