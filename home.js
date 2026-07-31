@@ -1,4 +1,4 @@
-const text = "All Your University Resources,";
+const text = "Find notes, past papers, lectures and more easily Save time, learn better, grow together.";
 const speed = 100; // typing speed in ms
 
 let i = 0;
