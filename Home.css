@@ -141,7 +141,7 @@ body {
   justify-content: space-between;
   gap: 40px;
   padding: 64px 64px 80px;
-  background: linear-gradient(120deg, var(--hero-bg-1), var(--hero-bg-2));
+  background: linear-gradient(120deg, var(--hero-bg-1), #c0e1ef);
   flex-wrap: wrap;
 }
 
