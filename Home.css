@@ -83,6 +83,29 @@ body {
   gap: 12px;
 }
 
+.typewriter-line {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--blue-accent);
+  margin-bottom: 12px;
+  min-height: 30px;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.a{
+  text-decoration:none;
+}
+
 .btn {
   padding: 8px 22px;
   border-radius: 10px;
@@ -91,6 +114,7 @@ body {
   cursor: pointer;
   border: 1px solid var(--blue-accent);
   background: transparent;
+  text-decoration:none;
 }
 
 .btn-outline {
