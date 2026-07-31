@@ -27,7 +27,7 @@
     </nav>
 
     <div class="nav-actions">
-      <button class="btn btn-outline">Log in</button>
+      <button class="btn btn-outline" id="openbtn">Log in</button>
       <button class="btn btn-filled">Sign up</button>
     </div>
   </header>
@@ -101,7 +101,41 @@
       <a href="#" aria-label="GitHub">gh</a>
     </div>
   </footer>
-
-
+  <!--Login section-->
+  <form action="#" method="#">
+    <div class="modaloverlay" id="modaloverlay">
+      <div class="modalcontainer">
+        <button class="closebtn" id="closebtn">&times;</button>
+        <div class="modalleft">
+          <div class="formcontainer active" id="loginformcontainer">
+            <h2>Welcome to UniShare.lk</h2>
+            <div class="formgroup">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter Your Email">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter Your Password">
+            </div>
+            <button class="submitbtn">Log in</button>
+            <p style="margin-top: 15px; font-size: 14px; text-align: center;">If you don't have a account <a href="#" id="switchtosignup" style="color: #2d6cdf; font-weight: bold; text-decoration: none;">Sign up</a></p>
+          </div>
+          <!--Signup section-->
+          <div class="signupformcontainer" id="formcontainer">
+            <h2>Create Account</h2>
+            <div class="formgroup">
+              <label for="signupname">Full Name</label>
+              <input type="text" id="signupname" name="signupname" placeholder="Full Name">
+              <label for="signupemail">Email</label>
+              <input type="email" id="signupemail" name="signupemail" placeholder="Enter Your Email">
+              <label for="signuppassword">Password</label>
+              <input type="password" id="signuppassword" name="signuppassword" placeholder="Enter Your Password">
+            </div>
+            <button class="submitbtn" style="background-color: #2d6cdf;">Sign up</button>
+            <p style="margin-top: 15px; font-size: 14px; text-align: center;">If you have a account <a href="#" id="switchtologin" style="color: #2d6cdf; font-weight: bold; text-decoration: none;">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <script src="login.js"></script>
 </body>
 </html>
