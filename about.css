@@ -231,6 +231,25 @@ body {
   padding: 56px 24px;
 }
 
+/* .btn-filled had no styling defined anywhere, so the Contact Us button
+   was showing as plain text instead of a filled blue button. */
+.cta-section .btn-filled {
+  background-color: #3f5bd9;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-section .btn-filled:hover {
+  background-color: #2f4cd6;
+  color: #fff;
+}
+
 .cta-section h2 {
   font-size: 26px;
   font-weight: 700;
@@ -248,13 +267,14 @@ body {
 /*Tablet Responsive*/
 @media screen and (max-width: 1024px) {
 
-  .navbar {
-    padding: 16px 30px;
-  }
+  .navbar-custom {
+  height: auto;
+  padding: 12px 0;
+}
 
-  .nav-links {
-    gap: 20px;
-  }
+.navbar-nav {
+  gap: 18px;
+}
 
   .about-hero {
     padding: 50px 30px;
@@ -313,31 +333,43 @@ body {
 @media screen and (max-width: 767px) {
 
   /* Navbar */
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-  }
+  .navbar-custom {
+  height: auto;
+  padding: 12px 0;
+}
 
-  .nav-links {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 15px 0;
-  }
+.logo-img {
+  width: 70px;
+}
 
-  .nav-actions {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.logo-title {
+  font-size: 16px;
+}
 
-  .btn {
-    width: 130px;
-  }
+.logo-subtitle {
+  font-size: 10px;
+}
 
+.navbar-nav {
+  text-align: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.nav-link {
+  padding: 8px 4px;
+}
+
+#navbarNav .d-flex {
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-login,
+.btn-signup {
+  width: 130px;
+}
   /* Hero */
   .about-hero {
     padding: 40px 20px;
