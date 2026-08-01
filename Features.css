@@ -30,86 +30,6 @@ body {
   background: #B3E2F6;
 }
 
-/* ---------- Navbar ---------- */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: white;
-  padding: 18px 48px;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-icon {
-  font-size: 28px;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.logo-title {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.logo-sub {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.nav-links {
-  display: flex;
-  gap: 32px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--ink);
-  font-size: 16px;
-  font-weight: 500;
-  padding-bottom: 4px;
-}
-
-.nav-links a.active {
-  color: var(--blue-accent);
-  border-bottom: 2px solid var(--blue-accent);
-}
-
-.nav-actions {
-  display: flex;
-  gap: 12px;
-}
-
-.btn {
-  padding: 8px 22px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  border: 1px solid var(--blue-accent);
-  background: transparent;
-}
-
-.btn-outline {
-  color: var(--blue-accent);
-  background: var(--white);
-}
-
-.btn-filled {
-  color: var(--white);
-  background: var(--blue-accent);
-}
-
 /* ---------- Page title ---------- */
 .page-title {
   text-align: center;
@@ -118,7 +38,7 @@ body {
   margin: 40px 0 32px;
 }
 
-/* ---------- Features grid ---------- */
+/* ---------- Features grid (original CSS Grid, exact same values as before) ---------- */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(260px, 380px));
@@ -127,50 +47,44 @@ body {
   padding: 0 48px 64px;
 }
 
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+/* Bootstrap's .card component, restyled to match the original design exactly */
+.feature-card {
   background: var(--peach-light);
   border: 1px solid var(--card-border);
   border-radius: 16px;
-  padding: 22px 24px;
-  min-height: 130px;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.card:hover {
+.feature-card .card-body {
+  padding: 22px 24px;
+  min-height: 130px;
+}
+
+.feature-card:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
 
-.card:nth-child(4),
-.card:nth-child(5),
-.card:nth-child(6) {
+.feature-card-alt {
   background: var(--white);
 }
 
-.card-selected {
-  border: 2px solid var(--blue-accent);
-  background: var(--white);
-}
-
-.card-wide {
+.feature-card-wide {
   grid-column: 2 / 3;
   background: var(--white);
 }
 
-.card-text h3 {
+.feature-card .card-title {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 6px;
 }
 
-.card-text p {
+.feature-card .card-text {
   font-size: 13px;
   color: var(--muted);
   max-width: 220px;
+  margin-bottom: 0;
 }
 
 .icon-circle {
@@ -186,69 +100,11 @@ body {
   background: var(--white);
 }
 
-/* ---------- Footer ---------- */
-.footer {
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 40px 48px;
-  align-items: flex-start;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 18px;
-  min-width: 180px;
-}
-
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 150px;
-}
-
-.footer-col h4 {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.footer-col a,
-.footer-col span {
-  color: var(--footer-text);
-  text-decoration: none;
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-.footer-social {
-  display: flex;
-  gap: 14px;
-  margin-left: auto;
-}
-
-.footer-social a {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  color: var(--footer-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 13px;
-}
 
 /*Tablet Response*/
 @media screen and (max-width: 1024px) {
 
-  .navbar {
+  .site-navbar {
     padding: 16px 30px;
   }
 
@@ -267,12 +123,12 @@ body {
     padding: 0 30px 50px;
   }
 
-  .card {
+  .feature-card .card-body {
     min-height: 120px;
     padding: 20px;
   }
 
-  .card-wide {
+  .feature-card-wide {
     grid-column: auto;
   }
 
@@ -286,7 +142,7 @@ body {
 @media screen and (max-width: 767px) {
 
   /* Navbar */
-  .navbar {
+  .site-navbar {
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -324,7 +180,7 @@ body {
     padding: 0 20px 40px;
   }
 
-  .card {
+  .feature-card .card-body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -332,15 +188,15 @@ body {
     min-height: auto;
   }
 
-  .card-text p {
+  .feature-card .card-text {
     max-width: 100%;
   }
 
   .icon-circle {
-    margin-bottom: 12px;
+    margin-bottom: 4px;
   }
 
-  .card-wide {
+  .feature-card-wide {
     grid-column: auto;
   }
 
