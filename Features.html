@@ -1,98 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UniShare.lk — Features</title>
-<link rel="stylesheet" href="Features.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniShare.lk — Features</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Features.css">
+  </head>
+  <body>
 
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-       <a href="Home.html"><img src="logo.png" alt="logo" width="100px"></a>
-      <div class="logo-text">
-        <span class="logo-title">UniShare.lk</span>
-        <span class="logo-sub">Smart University</span>
-      </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
 
-    <nav class="nav-links">
-        <a href="Home.html">Home</a>
-      <a href="Features.html" class="active">Features</a> 
-      <a href="Resourse.html">Resources</a>
-      <a href="contact.html">Contact</a>
-      <a href="About.html">About us</a>
-    </nav>
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
 
-    <div class="nav-actions">
-      <button class="btn btn-outline">Log in</button>
-      <button class="btn btn-filled">Sign up</button>
+            <img src="logo.png" alt="Logo" class="logo-img">
+
+            <div class="ms-3">
+                <h3 class="logo-title mb-0">UniShare.lk</h3>
+                <small class="logo-subtitle">Smart University </small>
+            </div>
+
+        </a>
+
+        <!-- Mobile Menu -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Home.html" >Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Features.html" style="color: #2d6cdf;">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Resourse.html">Resources</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About us</a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex gap-3">
+
+                <button class="btn btn-login" id="openbtn">
+                    Log in
+                </button>
+
+                <button class="btn btn-signup" id="openbtnsignup">
+                    Sign up
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
-  </header>
+</nav>
 
   <!-- Page heading -->
   <main>
     <h1 class="page-title">Features</h1>
 
+    <!-- Features grid (original CSS Grid layout, Bootstrap card component inside each item) -->
     <section class="features-grid">
 
-      <article class="card">
-        <div class="card-text">
-          
-          <h3>Upload Resources</h3>
-          <p>Upload the materials you want to share</p>
+      <article class="card feature-card">
+        <div class="card-body d-flex align-items-center justify-content-between gap-3">
+          <div>
+            <h3 class="card-title">Upload Resources</h3>
+            <p class="card-text">Upload the materials you want to share</p>
+          </div>
+          <div class="icon-circle">⬆️</div>
         </div>
-        <div class="icon-circle">⬆️</div>
       </article>
 
-      <article class="card">
-        <div class="card-text">
-          <h3>Download Resources</h3>
-          <p>Download the materials you want</p>
+      <article class="card feature-card">
+        <div class="card-body d-flex align-items-center justify-content-between gap-3">
+          <div>
+            <h3 class="card-title">Download Resources</h3>
+            <p class="card-text">Download the materials you want</p>
+          </div>
+          <div class="icon-circle">⬇️</div>
         </div>
-        <div class="icon-circle">⬇️</div>
       </article>
 
-      <article class="card">
-        <div class="card-text">
-          <h3>Comments</h3>
-          <p>Discuss and ask questions in comment section</p>
+      <article class="card feature-card feature-card-alt">
+        <div class="card-body d-flex align-items-center justify-content-between gap-3">
+          <div>
+            <h3 class="card-title">Comments</h3>
+            <p class="card-text">Discuss and ask questions in comment section</p>
+          </div>
+          <div class="icon-circle">💬</div>
         </div>
-        <div class="icon-circle">💬</div>
       </article>
 
-      <article class="card">
-        <div class="card-text">
-          <h3>Bookmarks &amp; Save</h3>
-          <p>Save your favourite materials</p>
+      <article class="card feature-card feature-card-alt">
+        <div class="card-body d-flex align-items-center justify-content-between gap-3">
+          <div>
+            <h3 class="card-title">Bookmarks &amp; Save</h3>
+            <p class="card-text">Save your favourite materials</p>
+          </div>
+          <div class="icon-circle">🔖</div>
         </div>
-        <div class="icon-circle">🔖</div>
       </article>
 
-      <article class="card ">
-        <div class="card-text">
-          <h3>To Do List</h3>
-          <p>Plan your tasks and do it</p>
+      <article class="card feature-card feature-card-alt">
+        <div class="card-body d-flex align-items-center justify-content-between gap-3">
+          <div>
+            <h3 class="card-title">To Do List</h3>
+            <p class="card-text">Plan your tasks and do it</p>
+          </div>
+          <div class="icon-circle">📝</div>
         </div>
-        <div class="icon-circle">📝</div>
       </article>
 
-      <article class="card">
-        <div class="card-text">
-          <h3>Advance Search</h3>
-          <p>Search your subjects</p>
+      <article class="card feature-card">
+        <div class="card-body d-flex align-items-center justify-content-between gap-3">
+          <div>
+            <h3 class="card-title">Advance Search</h3>
+            <p class="card-text">Search your subjects</p>
+          </div>
+          <div class="icon-circle">🔍</div>
         </div>
-        <div class="icon-circle">🔍</div>
       </article>
 
-      <article class="card card-wide">
-        <div class="card-text">
-          <h3>Report</h3>
-          <p>Report unnecessary things</p>
+      <article class="card feature-card feature-card-wide">
+        <div class="card-body d-flex align-items-center justify-content-between gap-3">
+          <div>
+            <h3 class="card-title">Report</h3>
+            <p class="card-text">Report unnecessary things</p>
+          </div>
+          <div class="icon-circle">🚩</div>
         </div>
-        <div class="icon-circle">🚩</div>
       </article>
 
     </section>
@@ -101,7 +162,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-brand">
-      <a href="Home.html"><img src="logo.png" alt="logo" width="100px"></a>
+      <a href="Home.html"><img src="logo.png" alt="logo" width="200px"></a>
       <span class="footer-brand-name">UniShare.lk</span>
     </div>
 
@@ -110,7 +171,7 @@
       <a href="Home.html">Home</a>
       <a href="Features.html">Features</a>
       <a href="Resourse.html">Resources</a>
-      <a href="contact.html">Contact</a>
+      <a href="#">Contact</a>
     </div>
 
     <div class="footer-col">
@@ -132,6 +193,52 @@
       <a href="#" aria-label="GitHub">gh</a>
     </div>
   </footer>
+  <!--Login section-->
+  <form action="#" method="#">
+    <div class="modaloverlay" id="modaloverlay">
+      <div class="modalcontainer">
+        <button class="closebtn" id="closebtn">&times;</button>
+        <div class="modalleft">
+          <div class="formcontainer active" id="loginformcontainer">
+            <h2>Welcome to UniShare.lk</h2>
+            <div class="formgroup">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+            </div>
+            <button class="submitbtn" style="background-color: #2d6cdf;">Log in</button>
+            <p style="margin-top: 15px; font-size: 14px; text-align: center;">If you don't have a account <a href="#" id="switchtosignup" style="color: #2d6cdf; font-weight: bold; text-decoration: none;">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </form>
+    <!--Signup section-->
+    <form action="#" method="#">
+      <div class="modaloverlay" id="modaloverlaysignup">
+        <div class="modalcontainer">
+          <button class="closebtn" id="closebtnsignup">&times;</button>
+          <div class="modalleft">
+            <div class="signupformcontainer" id="formcontainer">
+              <h2>Create Account</h2>
+              <div class="formgroup">
+              <label for="signupname">Full Name</label>
+              <input type="text" id="signupname" name="signupname" placeholder="Full Name" required>
+              <label for="signupemail">Email</label>
+              <input type="email" id="signupemail" name="signupemail" placeholder="Enter Your Email" required>
+              <label for="signuppassword">Password</label>
+              <input type="password" id="signuppassword" name="signuppassword" placeholder="Enter Your Password" required>
+              </div>
+              <button class="submitbtn" style="background-color: #2d6cdf;">Sign up</button>
+              <p style="margin-top: 15px; font-size: 14px; text-align: center;">If you have a account <a href="#" id="switchtologin" style="color: #2d6cdf; font-weight: bold; text-decoration: none;">Log in</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+<script src="login.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
