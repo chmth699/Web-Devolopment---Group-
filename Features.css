@@ -104,13 +104,14 @@ body {
 /*Tablet Response*/
 @media screen and (max-width: 1024px) {
 
-  .site-navbar {
-    padding: 16px 30px;
-  }
+ .navbar-custom {
+  height: auto;
+  padding: 12px 0;
+}
 
-  .nav-links {
-    gap: 20px;
-  }
+.navbar-nav {
+  gap: 18px;
+}
 
   .page-title {
     font-size: 34px;
@@ -142,31 +143,43 @@ body {
 @media screen and (max-width: 767px) {
 
   /* Navbar */
-  .site-navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-  }
+  .navbar-custom {
+  height: auto;
+  padding: 12px 0;
+}
 
-  .nav-links {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 15px 0;
-  }
+.logo-img {
+  width: 70px;
+}
 
-  .nav-actions {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.logo-title {
+  font-size: 16px;
+}
 
-  .btn {
-    width: 130px;
-  }
+.logo-subtitle {
+  font-size: 10px;
+}
 
+.navbar-nav {
+  text-align: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.nav-link {
+  padding: 8px 4px;
+}
+
+#navbarNav .d-flex {
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-login,
+.btn-signup {
+  width: 130px;
+}
   /* Page Title */
   .page-title {
     font-size: 28px;
