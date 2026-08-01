@@ -82,12 +82,12 @@
   <!-- Page heading -->
   <div class="resources-hero">
     <div class="hero-left">
-      <h1 align: left;>&nbsp;&nbsp;Resources</h1>
-      <br>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;Find the best study materials you want from here.</p>
+      <h1>Resources</h1>
+      <p>Find the best study materials you want from here.</p>
 
       <!-- Categories dropdown -->
-        <label for="categorySelect" class="dropdown"></label>
+      <div class="dropdown-wrapper">
+        <label for="categorySelect" class="visually-hidden">Filter by category</label>
         <select id="categorySelect" class="category-select">
           <option value="all" selected>All Categories</option>
           <option value="notes">Notes</option>
@@ -96,6 +96,7 @@
           <option value="videos">Videos</option>
           <option value="papers">Past Papers</option>
         </select>
+      </div>
     </div>
     <img src="images-removebg-preview (7).png" alt="" width="430px" height="auto">
   </div>
@@ -162,7 +163,7 @@
 
     <div class="footer-col">
       <h4>Contact</h4>
-      <span>+94 7X XXX XXXX</span>
+      <span>+94 70 213 5698</span>
       <span>Uni@Share.lk</span>
     </div>
 
@@ -218,6 +219,7 @@
       </div>
     </form>
     <script src="login.js"></script>
+    <script src="resours.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
