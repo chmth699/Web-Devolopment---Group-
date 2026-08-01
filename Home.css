@@ -503,6 +503,7 @@ body {
 
 
 /*Tablet Response*/
+<<<<<<< HEAD
 @media screen and (max-width:1024px){
 
   /* Navbar */
@@ -523,6 +524,115 @@ body {
     padding:12px 4px;
     font-size:15px;
   }
+=======
+@media screen and (max-width: 1024px) {
+
+  .navbar-custom {
+  height: auto;
+  padding: 12px 0;
+}
+
+.navbar-nav {
+  gap: 18px;
+}
+
+  main a img{
+    width: 470px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+    gap: 40px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+  }
+
+  .search-box {
+    max-width: 550px;
+    margin: 0 auto 15px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-art {
+    min-height: 350px;
+  }
+
+  .art-scene {
+    max-width: 360px;
+  }
+
+  .laptop-screen {
+    width: 200px;
+    height: 130px;
+  }
+
+  .laptop-base {
+    width: 230px;
+  }
+
+  .footer {
+    padding: 35px 30px;
+    gap: 30px;
+  }
+}
+
+/*Mobile Response*/
+@media screen and (max-width: 767px) {
+
+  /* Navbar */
+ .navbar-custom {
+  height: auto;
+  padding: 12px 0;
+}
+
+.logo-img {
+  width: 70px;
+}
+
+.logo-title {
+  font-size: 16px;
+}
+
+.logo-subtitle {
+  font-size: 10px;
+}
+
+.navbar-nav {
+  text-align: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.nav-link {
+  padding: 8px 4px;
+}
+
+#navbarNav .d-flex {
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-login,
+.btn-signup {
+  width: 130px;
+}
+>>>>>>> 31f0725be6e87e3ec79f21c26b5cadcb76b560d7
 
   .btn-login,
   .btn-signup{
