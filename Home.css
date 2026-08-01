@@ -503,28 +503,6 @@ body {
 
 
 /*Tablet Response*/
-<<<<<<< HEAD
-@media screen and (max-width:1024px){
-
-  /* Navbar */
-  .navbar-custom{
-    height:auto;
-    padding:15px 20px;
-  }
-
-  .logo-img{
-    width:100px;
-  }
-
-  .navbar-nav{
-    gap:18px;
-  }
-
-  .nav-link{
-    padding:12px 4px;
-    font-size:15px;
-  }
-=======
 @media screen and (max-width: 1024px) {
 
   .navbar-custom {
@@ -537,7 +515,8 @@ body {
 }
 
   main a img{
-    width: 470px;
+    padding: auto;
+    width: 600px;
   }
 
   .hero {
@@ -589,106 +568,13 @@ body {
     padding: 35px 30px;
     gap: 30px;
   }
+
+  .footer-brand img {
+    width: 120px;
+  }
 }
 
-/*Mobile Response*/
-@media screen and (max-width: 767px) {
 
-  /* Navbar */
- .navbar-custom {
-  height: auto;
-  padding: 12px 0;
-}
-
-.logo-img {
-  width: 70px;
-}
-
-.logo-title {
-  font-size: 16px;
-}
-
-.logo-subtitle {
-  font-size: 10px;
-}
-
-.navbar-nav {
-  text-align: center;
-  gap: 12px;
-  margin: 10px 0;
-}
-
-.nav-link {
-  padding: 8px 4px;
-}
-
-#navbarNav .d-flex {
-  width: 100%;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.btn-login,
-.btn-signup {
-  width: 130px;
-}
->>>>>>> 31f0725be6e87e3ec79f21c26b5cadcb76b560d7
-
-  .btn-login,
-  .btn-signup{
-    width:85px;
-    font-size:15px;
-  }
-
-  /* Hero */
-  .hero{
-    flex-direction:column;
-    text-align:center;
-    padding:50px 30px;
-    gap:40px;
-  }
-
-  .heropng{
-    width:600px;
-    height:500px;
-  }
-
-  .hero-text{
-    max-width:100%;
-  }
-
-  .hero-text h1{
-    font-size:38px;
-  }
-
-  .hero-desc{
-    font-size:15px;
-  }
-
-  .search-box{
-    max-width:600px;
-    margin:0 auto 20px;
-  }
-
-  .hero-actions{
-    justify-content:center;
-  }
-
-  .hero-art{
-    min-height:320px;
-  }
-
-  .art-scene{
-    transform:scale(.9);
-  }
-
-  /* Footer */
-  .footer{
-    gap:40px;
-    padding:35px 30px;
-  }
-
-}
 /*--Mobile Response--*/
 @media screen and (max-width:767px){
 
@@ -814,11 +700,15 @@ body {
   /* Footer */
 
   .footer{
+    display: flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
     gap:25px;
     padding:30px 20px;
+  }
+  .footer-brand img{
+    width: 100px;
   }
 
   .footer-brand{
