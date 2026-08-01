@@ -30,8 +30,8 @@ body {
   background: #B3E2F6;
 }
 
-/* ---------- Navbar ---------- */
-.navbar {
+/* ---------- Navbar (renamed from .navbar to avoid Bootstrap's built-in .navbar rules) ---------- */
+.site-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,7 +118,7 @@ body {
   margin: 40px 0 32px;
 }
 
-/* ---------- Features grid ---------- */
+/* ---------- Features grid (original CSS Grid, exact same values as before) ---------- */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(260px, 380px));
@@ -127,50 +127,44 @@ body {
   padding: 0 48px 64px;
 }
 
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+/* Bootstrap's .card component, restyled to match the original design exactly */
+.feature-card {
   background: var(--peach-light);
   border: 1px solid var(--card-border);
   border-radius: 16px;
-  padding: 22px 24px;
-  min-height: 130px;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.card:hover {
+.feature-card .card-body {
+  padding: 22px 24px;
+  min-height: 130px;
+}
+
+.feature-card:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
 
-.card:nth-child(4),
-.card:nth-child(5),
-.card:nth-child(6) {
+.feature-card-alt {
   background: var(--white);
 }
 
-.card-selected {
-  border: 2px solid var(--blue-accent);
-  background: var(--white);
-}
-
-.card-wide {
+.feature-card-wide {
   grid-column: 2 / 3;
   background: var(--white);
 }
 
-.card-text h3 {
+.feature-card .card-title {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 6px;
 }
 
-.card-text p {
+.feature-card .card-text {
   font-size: 13px;
   color: var(--muted);
   max-width: 220px;
+  margin-bottom: 0;
 }
 
 .icon-circle {
@@ -248,7 +242,7 @@ body {
 /*Tablet Response*/
 @media screen and (max-width: 1024px) {
 
-  .navbar {
+  .site-navbar {
     padding: 16px 30px;
   }
 
@@ -267,12 +261,12 @@ body {
     padding: 0 30px 50px;
   }
 
-  .card {
+  .feature-card .card-body {
     min-height: 120px;
     padding: 20px;
   }
 
-  .card-wide {
+  .feature-card-wide {
     grid-column: auto;
   }
 
@@ -286,7 +280,7 @@ body {
 @media screen and (max-width: 767px) {
 
   /* Navbar */
-  .navbar {
+  .site-navbar {
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -324,7 +318,7 @@ body {
     padding: 0 20px 40px;
   }
 
-  .card {
+  .feature-card .card-body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -332,15 +326,15 @@ body {
     min-height: auto;
   }
 
-  .card-text p {
+  .feature-card .card-text {
     max-width: 100%;
   }
 
   .icon-circle {
-    margin-bottom: 12px;
+    margin-bottom: 4px;
   }
 
-  .card-wide {
+  .feature-card-wide {
     grid-column: auto;
   }
 
