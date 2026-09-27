@@ -1,0 +1,507 @@
+/*  Shared additions layered on top of each page's own CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Fix: every <a> on the site (button-styled links, plain inline text
+   links like "Sign up" / "Log in", footer links, etc.) was showing the
+   browser's default underline because nothing reset it globally — only
+   a few individual classes (.nav-links a, .footer-col a...) did.
+   Resetting it once here, then re-adding underline only where a link
+   sits inline in a sentence (.text-link) via :hover, keeps the whole
+   site underline-free by default while inline links are still clearly
+   clickable (color + weight). */
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.btn:hover,
+.btn:visited,
+.btn:active,
+.btn:focus {
+  text-decoration: none !important;
+}
+
+/* Plain inline text links that aren't styled as buttons or nav items
+   (e.g. "Sign up to be the first to upload one!", "Log in to comment"). */
+.text-link {
+  color: var(--blue-accent, #3f5bd9);
+  font-weight: 600;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.nav-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: #43507a;
+  margin-right: 4px;
+  align-self: center;
+}
+
+@media (max-width: 980px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 24px;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 12px 18px;
+  }
+
+  .nav-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 16px 16px;
+  }
+
+  .nav-links {
+    gap: 10px 14px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .nav-actions .btn,
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .nav-username {
+    text-align: center;
+    display: block;
+    margin: 0;
+  }
+}
+
+/* Flash messages  */
+.flash {
+  max-width: 900px;
+  margin: 18px auto 0;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.flash-success {
+  background: #e4f7ee;
+  color: #1c7a4d;
+  border: 1px solid #b6ecd1;
+}
+
+.flash-error {
+  background: #fdeceb;
+  color: #c23b31;
+  border: 1px solid #f6c6c1;
+}
+
+/*  Auth pages (login / register)  */
+.auth-wrap {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.auth-card {
+  background: #fff;
+  border: 1px solid #e3ddd5;
+  border-radius: 16px;
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.auth-card h2 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.auth-card .auth-sub {
+  color: #6b6b6b;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.auth-card .form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-card label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.auth-card input {
+  padding: 10px 14px;
+  border: 1px solid #d9d3ca;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #3f5bd9;
+}
+
+.field-error {
+  color: #d64545;
+  font-size: 13px;
+}
+
+.auth-card button[type="submit"] {
+  width: 100%;
+  margin-top: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-switch {
+  margin-top: 18px;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+.auth-switch a {
+  color: #3f5bd9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/*  Dashboard  */
+.dashboard-wrap {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.dashboard-wrap h1 {
+  margin-bottom: 4px;
+}
+
+.dashboard-wrap .sub {
+  color: #6b6b6b;
+  margin-bottom: 28px;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .dash-grid { grid-template-columns: 1fr; }
+}
+
+.dash-card {
+  background: #fff;
+  border: 1px solid #e3ddd5;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.dash-card h3 {
+  margin-bottom: 14px;
+}
+
+.resource-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+}
+
+.resource-row:last-child { border-bottom: none; }
+
+.resource-row .tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  background: #eef0fb;
+  color: #3f5bd9;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.dash-card form .form-group {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dash-card label { font-size: 14px; font-weight: 600; }
+
+.dash-card input,
+.dash-card select,
+.dash-card textarea {
+  padding: 9px 12px;
+  border: 1px solid #d9d3ca;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.dash-card button[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+/* My Bookmarks / My To-Do List cards */
+.todo-add-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.todo-add-form input[type="text"] {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid #d9d3ca;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-row:last-child {
+  border-bottom: none;
+}
+
+.todo-check {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  line-height: 1;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 14px;
+}
+
+.todo-row.is-done .todo-text {
+  text-decoration: line-through;
+  color: #9a9a9a;
+}
+
+.todo-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 4px;
+  opacity: 0.7;
+}
+
+.todo-delete:hover {
+  opacity: 1;
+}
+
+/*  Resources listing  */
+.resource-list {
+  max-width: 1000px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.resource-item {
+  background: #fff;
+  border: 1px solid #e3ddd5;
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resource-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.resource-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.inline-form {
+  display: inline-flex;
+}
+
+.bookmark-btn.is-saved {
+  color: var(--white, #fff);
+  background: #3f5bd9;
+  border-color: #3f5bd9;
+}
+
+/* Comments (per resource, collapsible) */
+.comments-section {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.comments-section summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3f5bd9;
+  list-style: none;
+}
+
+.comments-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.comment {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.comment-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.comment p {
+  font-size: 14px;
+  color: #333;
+}
+
+.comment-form {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.comment-form textarea {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 9px 12px;
+  border: 1px solid #d9d3ca;
+  border-radius: 8px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.comment-form .btn {
+  flex-shrink: 0;
+}
+
+.resource-item .meta {
+  font-size: 13px;
+  color: #6b6b6b;
+  margin-top: 4px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #6b6b6b;
+  padding: 40px 20px;
+}
