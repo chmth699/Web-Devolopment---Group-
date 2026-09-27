@@ -1,4 +1,4 @@
-// ---------- Contact form validation ----------
+//  Contact form validation 
 const form = document.getElementById('contactForm');
 const successMsg = document.getElementById('formSuccess');
 
@@ -63,8 +63,4 @@ form.addEventListener('submit', (event) => {
     return;
   }
 
-  // All fields look good client-side: let the form submit normally to
-  // contact.php, which re-validates on the server and saves the message
-  // to the database. The success banner is then shown by PHP after the
-  // redirect (see contact.php), not here.
 });
