@@ -44,6 +44,7 @@ if (switchtologin) {
     });
 }
 
+
 //Signup
 const openbtnsignup = document.getElementById('openbtnsignup');
 const closebtnsignup = document.getElementById('closebtnsignup');

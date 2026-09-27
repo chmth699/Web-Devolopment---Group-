@@ -30,7 +30,7 @@ body {
   background: #B3E2F6;
 }
 
-/* ---------- Page title ---------- */
+/*  Page title  */
 .page-title {
   text-align: center;
   font-size: 40px;
@@ -38,7 +38,7 @@ body {
   margin: 40px 0 32px;
 }
 
-/* ---------- Features grid (original CSS Grid, exact same values as before) ---------- */
+/*  Features grid (original CSS Grid, exact same values as before)  */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(260px, 380px));

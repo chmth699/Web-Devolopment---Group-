@@ -23,7 +23,7 @@ body {
 }
 
 
-/* ---------- About hero ---------- */
+/*About hero*/
 .about-hero {
   text-align: center;
   padding: 56px 24px 32px;
@@ -55,7 +55,7 @@ body {
   line-height: 1.6;
 }
 
-/* ---------- Mission / Vision / Values ---------- */
+/*Mission / Vision / Values*/
 .mv-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(240px, 340px));
@@ -97,7 +97,7 @@ body {
   line-height: 1.6;
 }
 
-/* ---------- Stats strip ---------- */
+/*Stats strip*/
 .stats-strip {
   display: flex;
   justify-content: center;
@@ -125,7 +125,7 @@ body {
   margin-top: 4px;
 }
 
-/* ---------- Story section ---------- */
+/*Story section*/
 .story-section {
   display: flex;
   align-items: center;
@@ -170,7 +170,7 @@ body {
   font-size: 72px;
 }
 
-/* ---------- Team ---------- */
+/*  Team  */
 .team-section {
   padding: 24px 48px 64px;
   text-align: center;
@@ -222,7 +222,7 @@ body {
   color: var(--muted);
 }
 
-/* ---------- CTA ---------- */
+/*  CTA  */
 .cta-section {
   text-align: center;
   background: var(--peach-light);

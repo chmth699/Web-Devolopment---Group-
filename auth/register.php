@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $old['username'] = $username;
     $old['email'] = $email;
 
-    // ---- Server-side validation (must not rely on JS alone) ----
+    //  Server-side validation (must not rely on JS alone) 
     if (strlen($username) < 3) {
         $errors['username'] = 'Username must be at least 3 characters.';
     }
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['confirm_password'] = 'Passwords do not match.';
     }
 
-    // ---- Uniqueness check ----
+    //  Uniqueness check 
     if (empty($errors)) {
         $stmt = $pdo->prepare('SELECT id FROM users WHERE username = ? OR email = ?');
         $stmt->execute([$username, $email]);
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // ---- Create the account ----
+    //  Create the account 
     if (empty($errors)) {
         $hashed = password_hash($password, PASSWORD_BCRYPT);
 
