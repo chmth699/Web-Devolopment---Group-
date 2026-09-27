@@ -1,4 +1,4 @@
-// ---------- Categories dropdown ----------
+//  Categories dropdown 
 const dropdown = document.getElementById('categoryDropdown');
 const dropdownToggle = document.getElementById('dropdownToggle');
 const dropdownMenu = document.getElementById('dropdownMenu');
@@ -54,7 +54,6 @@ typeCards.forEach((card) => {
   card.addEventListener('click', () => {
     const category = card.getAttribute('data-category');
     console.log('Selected resource type:', category);
-    // Example: redirect to a filtered resources listing page
-    // window.location.href = `resources-list.html?category=${category}`;
+
   });
 });
