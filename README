@@ -10,7 +10,7 @@ papers) organised by category.
 - HTML5, CSS3, Bootstrap-style custom CSS
 - Vanilla JavaScript (client-side validation, UI interactions)
 - PHP 8 (server-side logic, PDO + MySQLi-style prepared statements)
-- MySQL (via XAMPP/WAMP)
+- MySQL (via XAMPP)
 
 ## Folder Structure
 ```
@@ -66,7 +66,7 @@ project/
 
 5. **Open the site** in your browser:
    ```
-   http://localhost/unishare/index.php
+   http://localhost/unishare/home.php
    ```
 
 6. **Create an account** via the "Sign up" button, then log in. From the
