@@ -1,0 +1,95 @@
+# UniShare.lk — Student Resource Hub
+
+ICT 1209 – Web Technologies | Mini Project (Phase 3: PHP & MySQL Integration)
+
+A student resource-sharing platform where users register, log in, and
+upload/browse study materials (notes, slides, lab reports, videos, past
+papers) organised by category.
+
+## Tech Stack
+- HTML5, CSS3, Bootstrap-style custom CSS
+- Vanilla JavaScript (client-side validation, UI interactions)
+- PHP 8 (server-side logic, PDO + MySQLi-style prepared statements)
+- MySQL (via XAMPP/WAMP)
+
+## Folder Structure
+```
+project/
+├── css/            Stylesheets (one per page, + shared.css for auth/dashboard/resources)
+├── js/              Vanilla JS (form validation, UI effects)
+├── images/          Logo and hero images
+├── includes/
+│   ├── db.php              PDO database connection
+│   ├── functions.php       Session, auth-guard, and helper functions
+│   ├── header.php          Shared, auth-aware navbar
+│   └── footer.php          Shared footer
+├── auth/
+│   ├── register.php        Sign up (bcrypt password hashing)
+│   ├── login.php            Log in (session_regenerate_id on success)
+│   └── logout.php           Clean session teardown
+├── uploads/          Uploaded resource files (protected via .htaccess)
+├── contact.php        Contact form → saved to `messages` table
+├── index.php           Home page
+├── features.php        Features page
+├── about.php            About page
+├── resources.php        Public resource browser (search + category filter)
+├── dashboard.php        Protected: upload resources, view your own uploads
+├── database.sql         Full schema (users, messages, resources)
+└── README.md
+```
+
+## Setup Instructions (XAMPP)
+
+1. **Install & start XAMPP.** Start the **Apache** and **MySQL** modules from
+   the XAMPP control panel.
+
+2. **Copy the project folder** into your XAMPP web root, e.g.:
+   ```
+   C:\xampp\htdocs\unishare\
+   ```
+   (On macOS: `/Applications/XAMPP/htdocs/unishare/`)
+
+3. **Import the database.**
+   - Open `http://localhost/phpmyadmin`
+   - Click **Import**, choose `database.sql`, and click **Go**.
+   - This creates the `unishare` database with `users`, `messages`, and
+     `resources` tables.
+   - Alternatively, from a terminal: `mysql -u root -p < database.sql`
+   - Then also import **`database_additions.sql`** the same way (or
+     `mysql -u root -p unishare < database_additions.sql`). This adds the
+     `comments`, `bookmarks`, and `todos` tables used by the Features page
+     (Comments, Bookmarks & Save, and To Do List).
+
+4. **Check the DB credentials** in `includes/db.php` match your XAMPP setup.
+   The defaults (`root` user, empty password, `localhost`) work for a
+   standard XAMPP install with no changes needed.
+
+5. **Open the site** in your browser:
+   ```
+   http://localhost/unishare/index.php
+   ```
+
+6. **Create an account** via the "Sign up" button, then log in. From the
+   dashboard you can upload a resource; it will then appear on the public
+   Resources page for everyone to browse and download.
+
+## Security Notes
+- Passwords are hashed with `password_hash()` (`PASSWORD_BCRYPT`) — never
+  stored in plain text.
+- All database queries use **prepared statements** (PDO) to prevent SQL
+  injection.
+- `session_regenerate_id()` is called on successful login to prevent
+  session fixation.
+- All user-supplied output is escaped with `htmlspecialchars()` before being
+  printed, to prevent XSS.
+- The `uploads/` folder has a `.htaccess` rule blocking execution of any
+  uploaded PHP file.
+- Every form is validated **both** client-side (JavaScript, for instant
+  feedback) and server-side (PHP, because JavaScript can be bypassed).
+
+## Notes
+- The Post/Redirect/Get pattern is used on `contact.php`, `dashboard.php`,
+  and the auth pages, so refreshing the page after a submission never
+  resubmits the form.
+- `includes/header.php` reads the session to show either "Log in / Sign up"
+  or "Dashboard / Log out" in the navbar automatically.
